@@ -1,5 +1,5 @@
 import sys
-sys.stdin = open("input.txt", "rt")
+# sys.stdin = open("C:\\Users\\crpark\\vscode_py\\py_algo\\input.txt", "rt")
 
 # 소수(에라토스테네스 체)
 # 자연수 N이 입력되면 1부터 N까지의 소수의 개수를 출력하는 프로그램을 작성하세요.
@@ -12,3 +12,18 @@ sys.stdin = open("input.txt", "rt")
 # 8
 
 n = int(input())
+arr = [True] * (n+1)
+arr[0] = arr[1] = False
+check = int(n/2)
+
+for i in range(2, check+1):
+    if arr[i] == True:
+        for j in range(i*2, len(arr), i):
+            arr[j] = False
+
+cnt = 0
+for i in arr:
+    if i == True:
+        cnt += 1
+
+print(cnt)
