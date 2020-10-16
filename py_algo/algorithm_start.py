@@ -32,3 +32,11 @@
 # print(list(map(lambda x: x+1, a)))
 
 # 파이썬에서 가장 큰 값 = float('inf')
+
+sec = 3
+secNum = 11
+for i in range(1, secNum+1):
+    section = open("C:\\Users\\crpark\\vscode_py\\py_algo\\section"+str(sec)+"\\se"+str(sec)+"_"+str(i)+".py", "w", encoding="utf8")
+    section.write("import sys\n")
+    section.write("sys.stdin = open(\"C:\\\\Users\\\\crpark\\\\vscode_py\\\\py_algo\\\\input.txt\", \"rt\")")
+    section.close()
